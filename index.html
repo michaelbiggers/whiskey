@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bourbon or Scotch?</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+	<link href="css/grayscale.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+	
+	<!--Google charts-->
+	<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['geochart']}]}"></script>
+
+	<!--D3 charts-->
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="d3pie.min.js"></script>
+	
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll"">
+
+
+
+
+	
+	
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-2 bottleleft animated wobble">
+						<img src="img/bottle3.png" alt="">
+					</div>
+                    <div class="col-md-8">
+                        <h1 class="brand-heading animated bounceInLeft BourbonA">Bourbon</h1>
+						<h1 class="or-heading animated bounceInLeft orA">or</h1>
+						<h1 class="brand-heading animated bounceInUp scotchA">Scotch?</h1>
+                        <p class="intro-text animated flipInX">Bourbon and Scotch may be whiskies with a lot of common ground, but they each have a story of their own. Learn the differences between them and become closer with the spirits.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-arrow-down animated"></i>
+                        </a>
+                    </div>
+					<div class="col-md-2 bottleright animated bounceInLeft">
+						<img src="img/bottle3.png" alt="">
+					</div>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+	<!-- Overview Section -->
+    <section id="about" class="black container-fluid overview-section">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class='text-center animate1 white'>What is WHiskey?<h2>
+			</div>
+		</div> 
+		<div class='content-section'>
+                <div class="col-lg-4">
+					<div class='txtbox animated bounceInUp'>
+						<p> Let's start with what goes into making a whisky. By definition, whiskey (or whisky, in Scotland) is a spirit distilled from fermented grain mash — grain varieties include wheat, rye, barley, and corn — and then aged in oak barrels. Whiskey is made all over the world, which leads to there being quite a few different varieties. Let's take a look at some of the differences. </p>
+					</div>
+			   </div>
+           </div> 	   
+    </section>
+    <!-- About Section -->
+    <section id="about" class="black container-fluid about-section">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class='text-center animate1'>History</h2>
+			</div>
+		</div> 
+		<div class='content-section'>
+                <div class="col-lg-6">
+					<h2 class='text-center'>Bourbon</h2>
+					<div class='text-center btnpad'>
+						 <a href="javascript:SwapDivsWithClick('swapper-first','swapper-other')" class="btn btn-default btn-lg">Toggle</a> 
+						
+					</div>
+					<div class='animated bounceInUp' id="swapper-first" style="display:block;">
+						<p>Kentucky Bourbon is America's only native spirit. First created, distilled, and aged in Kentucky. The invention of bourbon is often attributed to a pioneering minister and distiller named Elijah Craig. He is said to also be the first to age the distillation in charred oak casks, "a process that gives the bourbon its reddish color and unique taste". The many years spent aging in new barrels is one of the reasons Kentucky Bourbon is among the best whiskies in the world today.   <br><br> more info....</p>
+						<div class='text-center' id='barChart'>
+							<div id="tooltip" class="hidden">
+								<p><strong><span id="value"></strong></p>
+							</div>
+						</div>
+						<p>As of 2013, approximately 95% of all bourbon is produced in Kentucky. The state has 4.9 million barrels of bourbon that are aging – a number that exceeds the state population.</p>
+					</div>
+					<div class='animated bounceInUp' id="swapper-other" style="display:none;">
+						<p>Kentucky Bourbon is America's only native spirit. First created, distilled, and aged in Kentucky. The invention of bourbon is often attributed to a pioneering minister and distiller named Elijah Craig. He is said to also be the first to age the distillation in charred oak casks, "a process that gives the bourbon its reddish color and unique taste". The many years spent aging in new barrels is one of the reasons Kentucky Bourbon is among the best whiskies in the world today.  After the golden liquid is removed, the barrels are exported where they are reused to make another whiskey you may have heard of. You guessed it. Scotch. <br><br> hjvhvugvgvgvjhvjhvhjvhjvjhvjgvjgvhgvjhvjhv.</p>
+						<!-- <div id="regions_div" style="width: 400px; height: 400px;"></div> -->
+					</div>
+			   </div>
+			   <div class="col-lg-6">
+                    <h2 class='text-center'>Scotch</h2>
+					<div class='text-center btnpad'>
+						<a class="btn btn-default btn-lg">Origins</a>
+						<a class="btn btn-default btn-lg">Present</a>
+					</div>
+					<div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis ut nulla at fermentum. Integer interdum arcu a sapien sagittis volutpat. Curabitur at felis ultrices, convallis erat at, elementum dui. Mauris a ultricies risus. Integer non arcu elementum, pretium nibh sed, porttitor tellus. Aenean vitae consectetur dolor, et pharetra nunc. Suspendisse sagittis tincidunt mauris non dignissim. Curabitur pellentesque ante velit, quis porttitor augue condimentum ac. Nam lobortis dui sed lorem tristique mattis ac eget sapien. Phasellus id nibh sit amet sapien tincidunt efficitur. Aenean porttitor, lacus at efficitur vulputate, ex arcu mollis enim, at vehicula nulla ligula et libero. Donec vulputate lectus a porta vestibulum. Fusce volutpat mauris sollicitudin, euismod eros quis, fringilla tortor. Donec sed tempor urna. Suspendisse tempor arcu ex, eu ultricies velit ornare et. Duis risus dui, sagittis sed ornare sit amet, luctus eu odio. <br><br> Sed blandit vulputate dolor, in laoreet ex dapibus a. Sed tortor sapien, lacinia ac pellentesque eget, maximus eu justo. Vestibulum et ipsum vel ipsum faucibus consectetur. Cras euismod malesuada sollicitudin. Nam ac mollis ex. Vestibulum tortor lorem, condimentum in aliquam eget, elementum at erat. Pellentesque viverra arcu a nibh aliquet, et cursus nisi finibus. Integer ac maximus urna, et malesuada neque. Morbi quis molestie arcu.</p>
+					</div>
+               </div>
+           </div> 	   
+    </section>
+
+
+    <!-- Download Section -->
+    <section id="download" class="container-fluid download-section">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class='text-center'>Process</h2>
+					</div>
+				</div> 
+                <div class="col-lg-6">
+					<h2 class='text-center'>Bourbon</h2>
+					<div class='txtbox' id='pie'>
+						<h3 class='text-center'>Legal requirements</h3>
+						<!-- <p>•	Produced in the United States<br>•	Made from a grain mixture that is at least 51% corn.<br>•	Aged in new, charred oak barrels.<br>•	Distilled to no more than 160 (U.S.) proof (80% alcohol by volume).<br>•	Entered into the barrel for aging at no more than 125 proof (62.5% alcohol by volume).<br>•	Bottled (like other whiskeys) at 80 proof or more (40% alcohol by volume). <br><br> more info....</p> -->
+						<p>After the golden liquid is removed, the barrels are exported where they are reused to make another whiskey you may have heard of. You guessed it. Scotch.
+					</div>					
+			   </div>
+			   <div class="col-lg-6">
+                    <h2 class='text-center'>Scotch</h2>
+					<p class='txtbox'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis ut nulla at fermentum. Integer interdum arcu a sapien sagittis volutpat. Curabitur at felis ultrices, convallis erat at, elementum dui. Mauris a ultricies risus. Integer non arcu elementum, pretium nibh sed, porttitor tellus. Aenean vitae consectetur dolor, et pharetra nunc. Suspendisse sagittis tincidunt mauris non dignissim. Curabitur pellentesque ante velit, quis porttitor augue condimentum ac. Nam lobortis dui sed lorem tristique mattis ac eget sapien. Phasellus id nibh sit amet sapien tincidunt efficitur. Aenean porttitor, lacus at efficitur vulputate, ex arcu mollis enim, at vehicula nulla ligula et libero. Donec vulputate lectus a porta vestibulum. Fusce volutpat mauris sollicitudin, euismod eros quis, fringilla tortor. Donec sed tempor urna. Suspendisse tempor arcu ex, eu ultricies velit ornare et. Duis risus dui, sagittis sed ornare sit amet, luctus eu odio. <br><br> Sed blandit vulputate dolor, in laoreet ex dapibus a. Sed tortor sapien, lacinia ac pellentesque eget, maximus eu justo. Vestibulum et ipsum vel ipsum faucibus consectetur. Cras euismod malesuada sollicitudin. Nam ac mollis ex. Vestibulum tortor lorem, condimentum in aliquam eget, elementum at erat. Pellentesque viverra arcu a nibh aliquet, et cursus nisi finibus. Integer ac maximus urna, et malesuada neque. Morbi quis molestie arcu.</p>
+               </div>
+    </section>
+	
+	<!-- Compare Section -->
+    <section id="compare" class="container-fluid compare-section">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class='text-center'>Differences</h2>
+			</div>
+		</div> 
+		<div class='content-section'>
+                <div class="col-lg-6">
+					<h2 class='text-center'>Bourbon</h2>
+					<div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis ut nulla at fermentum. Integer interdum arcu a sapien sagittis volutpat. Curabitur at felis ultrices, convallis erat at, elementum dui. Mauris a ultricies risus. Integer non arcu elementum, pretium nibh sed, porttitor tellus. Aenean vitae consectetur dolor, et pharetra nunc. Suspendisse sagittis tincidunt mauris non dignissim. Curabitur pellentesque ante velit, quis porttitor augue condimentum ac. Nam lobortis dui sed lorem tristique mattis ac eget sapien. Phasellus id nibh sit amet sapien tincidunt efficitur. Aenean porttitor, lacus at efficitur vulputate, ex arcu mollis enim, at vehicula nulla ligula et libero. Donec vulputate lectus a porta vestibulum. Fusce volutpat mauris sollicitudin, euismod eros quis, fringilla tortor. Donec sed tempor urna. Suspendisse tempor arcu ex, eu ultricies velit ornare et. Duis risus dui, sagittis sed ornare sit amet, luctus eu odio. <br><br>Sed blandit vulputate dolor, in laoreet ex dapibus a. Sed tortor sapien, lacinia ac pellentesque eget, maximus eu justo. Vestibulum et ipsum vel ipsum faucibus consectetur. Cras euismod malesuada sollicitudin. Nam ac mollis ex. Vestibulum tortor lorem, condimentum in aliquam eget, elementum at erat. Pellentesque viverra arcu a nibh aliquet, et cursus nisi finibus. Integer ac maximus urna, et malesuada neque. Morbi quis molestie arcu.</p>
+					</div>
+			   </div>
+			   <div class="col-lg-6">
+					<div>
+						<h2 class='text-center'>Scotch</h2>
+						<p class=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis ut nulla at fermentum. Integer interdum arcu a sapien sagittis volutpat. Curabitur at felis ultrices, convallis erat at, elementum dui. Mauris a ultricies risus. Integer non arcu elementum, pretium nibh sed, porttitor tellus. Aenean vitae consectetur dolor, et pharetra nunc. Suspendisse sagittis tincidunt mauris non dignissim. Curabitur pellentesque ante velit, quis porttitor augue condimentum ac. Nam lobortis dui sed lorem tristique mattis ac eget sapien. Phasellus id nibh sit amet sapien tincidunt efficitur. Aenean porttitor, lacus at efficitur vulputate, ex arcu mollis enim, at vehicula nulla ligula et libero. Donec vulputate lectus a porta vestibulum. Fusce volutpat mauris sollicitudin, euismod eros quis, fringilla tortor. Donec sed tempor urna. Suspendisse tempor arcu ex, eu ultricies velit ornare et. Duis risus dui, sagittis sed ornare sit amet, luctus eu odio. <br><br> Sed blandit vulputate dolor, in laoreet ex dapibus a. Sed tortor sapien, lacinia ac pellentesque eget, maximus eu justo. Vestibulum et ipsum vel ipsum faucibus consectetur. Cras euismod malesuada sollicitudin. Nam ac mollis ex. Vestibulum tortor lorem, condimentum in aliquam eget, elementum at erat. Pellentesque viverra arcu a nibh aliquet, et cursus nisi finibus. Integer ac maximus urna, et malesuada neque. Morbi quis molestie arcu.</p>
+				   </div>
+              </div>    
+		 </div>
+    </section>
+  
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Your Website 2014</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+	
+	
+	<!-- below is work in progress -->
+	
+<!--  	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script>
+    var s = skrollr.init({
+		render: function(data) {
+		  //Log the current scroll position.
+		  $('#info').text(data.curTop);
+		}
+	});
+	</script> -->
+	
+	
+	<!-- <script src="assets/viewportchecker.js"></script> 
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery('.post').addClass("hideme").viewportChecker({
+				classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+				offset: 100  
+			   });   
+		});            
+	</script> -->
+	
+	<script>
+		$(window).scroll(function() {
+			$('.animate1').each(function(){
+			var imagePos = $(this).offset().top;
+
+			var topOfWindow = $(window).scrollTop();
+				if (imagePos < topOfWindow+400) {
+					$(this).addClass("animated swing");
+				}
+			});
+		});
+	</script>
+	
+	
+	<script type="text/javascript">
+	function SwapDivsWithClick(div1,div2)
+	{
+	   d1 = document.getElementById(div1);
+	   d2 = document.getElementById(div2);
+	   if( d2.style.display == "none" )
+	   {
+		  d1.style.display = "none";
+		  d2.style.display = "block";
+	   }
+	   else
+	   {
+		  d1.style.display = "block";
+		  d2.style.display = "none";
+	   }
+	}
+	
+	<!--GOOGLE CHART STARTS HERE-->
+	  google.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['states', 'text'],
+          ['Kentucky', 'Kentucky is where Bourbon originated']
+        ]);
+
+        var options = {
+            resolution: 'provinces', 
+            region: 'US',
+            backgroundColor: 'transparent',
+            datalessRegionColor: '#eee'
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+	  <!--GOOGLE CHART ENDS HERE-->
+	  
+	
+	<!--BOURBON LEGAL REQUIREMENTS PIE STARTS HERE-->
+		var pie = new d3pie("#pie", { 
+			
+			"size": {
+				"canvasWidth": 900,
+				"pieInnerRadius": "10%",
+				"pieOuterRadius": "50%"
+			},
+			"data": {
+				"sortOrder": "value-desc",
+				"content": [
+					{
+						"label": "Produced in the United States",
+						"value": 2000,
+						"color": "rgba(255,255,255,0.5)"
+					},
+					{
+						"label": "Aged in new, charred oak barrels.",
+						"value": 2000,
+						"color": "rgba(255,255,255,0.2)"
+					},
+					{
+						"label": "Made from a grain mixture that is at least 51% corn.",
+						"value": 2000,
+						"color": "rgba(255,255,255,0.3)"
+					},
+					{
+						"label": "Distilled to no more than 160 (U.S.) proof.",
+						"value": 2000,
+						"color": "rgba(255,255,255,0.1)"
+					},
+					{
+						"label": "Entered into the barrel for aging at no more than 125 proof.",
+						"value": 2000,
+						"color": "rgba(255,255,255,0.4)"
+					},
+					{
+						"label": "Bottled at 80 proof or more (40% alcohol by volume).",
+						"value": 2000,
+						"color": "rgba(255,255,255,0.0)"
+					}
+				]
+			},
+			"labels": {
+				"outer": {
+					"format": "none",
+					"hideWhenLessThanPercentage": 1,
+					"pieDistance": 8
+				},
+				"inner": {
+					"format": "none",
+					"hideWhenLessThanPercentage": 3
+				},
+				"mainLabel": {
+					"fontSize": 11
+				},
+				"percentage": {
+					"color": "#ffffff",
+					"decimalPlaces": 0
+				},
+				"value": {
+					"color": "#adadad",
+					"fontSize": 11
+				},
+				"lines": {
+					"enabled": false
+				}
+			},
+			"tooltips": {
+				"enabled": true,
+				"type": "placeholder",
+				"string": "{label}",
+				"styles": {
+					"backgroundColor": "#ffffff",
+					"backgroundOpacity": 0.95,
+					"color": "#000000",
+					"font": "open sans",
+					"fontSize": 18,
+					"padding": 6
+				}
+			},
+			"effects": {
+				"pullOutSegmentOnClick": {
+					"speed": 400,
+					"size": 8
+				}
+			},
+			"misc": {
+				"gradient": {
+					"enabled": true,
+					"percentage": 100
+				}
+			}
+		});
+	<!--BOURBON LEGAL REQUIREMENTS PIE ENDS HERE-->
+	
+	
+	
+	
+	//START OF BAR CHART
+	//Width and height - controls how much space we'll let the chart have
+					var sortDir = false;
+					
+					var w = 400;
+					var h = 400;
+					var dataset = [
+						{ "name": "State Population", "rank": 9, "experience": "4.4 Million" },
+						{ "name": "Barrels of Bourbon", "rank": 12, "experience": "4.9 Million" }
+					];
+					//var dataset = [ 20, 15, 30, 8, 2];
+					//var languages = [ 'Adobe Illustrator', 'Adobe Premiere', 'FL Studio', 'Autodesk Maya', 'Adobe Photoshop'];
+					
+					//creates a scale suitable for something with ordinal (ordered) value
+					var xScale = d3.scale.ordinal()
+									//creates a space for each piece of data as a bar
+									.domain(d3.range(dataset.length))
+									//divides the available width  by the number of bars, leaving space between for margins
+									.rangeRoundBands([0, w], 0.1);
+					var yScale = d3.scale.linear()
+									//set the height range through the highest value in the dataset
+									.domain([0, 15])
+									.range([0, h]);
+					
+					//Create SVG element
+					var svg = d3.select("#barChart")
+								.append("svg")
+								.attr("width", w)
+								.attr("height", h)
+					//Create bars
+					svg.selectAll("rect")
+					   .data(dataset)
+					   .enter()
+					   .append("rect")
+					   .attr("x", function(d, i) {
+							//scale the x to the space set previously
+							return xScale(i);
+					   })
+					   .attr("y", function(d) {
+							return h - yScale(d.rank);
+					   })
+					   .attr("width", xScale.rangeBand())
+					   .attr("height", function(d) {
+							return yScale(d.rank);
+					   })
+					   .attr("fill", function(d) {
+							//sets color based on the data
+							return "rgba(172, 108, " + (d.rank * 3) + ", .8)";
+					   })
+					   //adds hover color change
+					   .on("mouseover", function(d) {
+							d3.select(this)
+								.attr("fill", "#6C4428"); 
+							//Get this bar's x/y values, then augment for the tooltip
+							var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.rangeBand() / 1;
+							var yPosition = parseFloat(d3.select(this).attr("y")) / 1 + h / 1.7;
+							//Update the tooltip position and value
+							d3.select("#tooltip")
+								.style("left", xPosition + "px")
+								.style("top", yPosition + "px")						
+								.select("#value")
+								.text(d.experience);
+							d3.select("#tooltip")
+								.select("#language")
+								.text(d.name);
+					   
+							//Show the tooltip
+							d3.select("#tooltip").classed("hidden", false);
+					   })
+					   //changes back when not hovered
+					   .on("mouseout", function(d) {
+						   d3.select(this)
+								.transition()
+								.duration(500)
+								.attr("fill", "rgb(172, 108, " + (d.rank * 3) + ")");
+						//Hide the tooltip
+							d3.select("#tooltip").classed("hidden", true);		
+					   });
+					//Create labels
+					svg.selectAll("text")
+					   .data(dataset)
+					   .enter()
+					   .append("text")
+					   .text(function(d, i) {
+							//grab the label at same index as current element
+							//return languages[i];
+							return d.name;
+					   })
+					   .attr("text-anchor", "middle")
+					   .attr("x", function(d, i) {
+							//place the text relative to the index of the data
+							return xScale(i) + xScale.rangeBand() / 2;
+					   })
+					   .attr("y", function(d) {
+							return h - yScale(d.rank) + 30;
+					   })
+					   .attr("font-family", "sans-serif")
+					   .attr("font-size", "18px")
+					   .attr("fill", "#fff");
+
+	</script>
+</body>
+
+</html>
