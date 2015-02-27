@@ -3,6 +3,18 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+ @font-face{
+    font-family: Aleo;
+    src: url(../fonts/aleo/Aleo-Regular.otf);
+ }
+ @font-face{
+    font-family: AleoLight;
+    src: url(../fonts/aleo/Aleo-Light.otf);
+ }
+  @font-face{
+    font-family: AleoItalic;
+    src: url(../fonts/aleo/Aleo-LightItalic.otf);
+ }
 
 body {
     width: 100%;
@@ -180,7 +192,7 @@ a:focus {
     display: block; 
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
     color: #fff;
     background: url(../img/drinks2.jpg) no-repeat bottom center scroll;
@@ -227,16 +239,18 @@ a:focus {
 @media(min-width:767px) {
     .intro {
         height: 100%;
-        padding: 100px;
+        padding: 10px;
     }
 
     .intro .intro-body .brand-heading {
         font-size: 100px;
+
     }
 
     .intro .intro-body .intro-text {
         font-size: 25px;
     }
+
 }
 
 .btn-circle {
@@ -336,17 +350,44 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/barrelsB&W.jpg) no-repeat center center scroll;
+    background: url(../img/barrelsB&W2.jpg) no-repeat center center scroll;
     /* background-color: #591E18; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-	
     min-height: 100%;
     height: 100%;
 }
 
+.scotch-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+  /*   background: url(../img/barrelsB&W.jpg) no-repeat center center scroll; */
+    background-color: #F2D98D;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+	min-height: 100%;
+    height: 100%;
+}
+
+
+.scotch-section2 {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+  /*   background: url(../img/barrelsB&W.jpg) no-repeat center center scroll; */
+    background-color: #6C4428;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+	min-height: 100%;
+    height: 100%;
+}
 
 .download-section {
     width: 100%;
@@ -354,18 +395,6 @@ a:focus {
     color: #fff;
     background: url(../img/barrelsB&W.jpg) no-repeat center center scroll;
     background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.compare-section {
-    width: 100%;
-    padding: 50px 0;
-    color: #fff;
-  /*   background: url(../img/barrelsB&W.jpg) no-repeat center center scroll; */
-    background-color: #591E18;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -473,6 +502,18 @@ body {
 	color: #fff;
 }
 
+.overviewtxtbox {
+    /* background-color: rgba(0,0,0,0.5);  */
+	padding: 30px;
+	color: #fff;
+}
+
+.overviewtxt {
+	line-height: 200%;
+	font-size: 24px;
+	padding-right: 4%;
+}
+
 .black {
 	color: #000;
 }
@@ -493,6 +534,9 @@ body {
    visibility: visible;
 }
 
+.scotlandpic {
+	 background: url(../img/Scotland.png);
+}
 
 #tooltip {
 				position: absolute;
@@ -514,3 +558,27 @@ body {
 				font-size: 14px;
 				line-height: 20px;
 			}
+			
+/*----Michael's CSS----*/
+#logo{
+    width:250px;
+    display:block;
+    margin:auto;
+    font-family:Aleo;
+}
+
+
+header h1 {
+    padding-top:2.6em;
+    font-size:4em;
+    font-family:AleoLight;
+    text-transform:none;
+    line-height: 1em;
+}
+header h2 {
+    line-height: .5em;
+    font-family:AleoItalic;
+     text-transform:none;
+}
+
+/*----END Michael's CSS----*/
