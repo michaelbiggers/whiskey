@@ -42,33 +42,31 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll"">
+<body id="page-top" data-spy="scroll">
 
 
-
-
-	
 	
     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
             <div class="container">
+            	<div class="row">
+            		<object id = "logo" type="image/svg+xml" data="img/logo.svg">Your browser does not support SVG</object>
+            	</div>
+
                 <div class="row">
-					<div class="col-md-2 bottleleft animated wobble">
-						<img src="img/bottle3.png" alt="">
-					</div>
-                    <div class="col-md-8">
-                        <h1 class="brand-heading animated bounceInLeft BourbonA">Bourbon</h1>
-						<h1 class="or-heading animated bounceInLeft orA">or</h1>
-						<h1 class="brand-heading animated bounceInUp scotchA">Scotch?</h1>
-                        <p class="intro-text animated flipInX">Bourbon and Scotch may be whiskies with a lot of common ground, but they each have a story of their own. Learn the differences between them and become closer with the spirits.</p>
+					
+                  <!--<div class="col-md-8">-->
+                        
+						<h1 class="">Do you know what you're drinking?</h1>
+						<h2 class="">a primer on bourbon and scotch</h2>
+                        
+
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-arrow-down animated"></i>
                         </a>
-                    </div>
-					<div class="col-md-2 bottleright animated bounceInLeft">
-						<img src="img/bottle3.png" alt="">
-					</div>
+                    <!--</div>-->
+					
                 </div>
             </div>
         </div>
@@ -76,26 +74,61 @@
 	
 	<!-- Overview Section -->
     <section id="about" class="black container-fluid overview-section">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2 class='text-center animate1 white'>What is WHiskey?<h2>
-			</div>
-		</div> 
+		<div class = "row">
+			<div class='content-section'>
+	                <div class="col-lg-4">
+						
+						<div class='overviewtxtbox animated bounceInUp'>
+							<h2 class='white'>What is Whiskey?</h2>
+							<p class='overviewtxt'>Let's start with what goes into making a whisky. By definition, whiskey (or whisky, in Scotland) is a spirit distilled from fermented grain mash — grain varieties include wheat, rye, barley, and corn — and then aged in oak barrels. Whiskey is made all over the world, which leads to there being quite a few different varieties. Let's take a look at some of the differences. </p>
+						</div>
+				   </div>
+	       </div>
+       </div> 
+       <div class = "row text-center">
+	       <div class="col-lg-4">  
+	       		<a href="#scotch" class="btn btn-circle page-scroll ">
+		           	<i class="fa fa-arrow-down animated"></i>
+		        </a> 
+		    </div> 
+	    </div>         
+    </section>
+	
+	
+	<!-- Scotch Section -->
+    <section id="scotch" class="black container-fluid scotch-section">
 		<div class='content-section'>
-                <div class="col-lg-4">
-					<div class='txtbox animated bounceInUp'>
-						<p> Let's start with what goes into making a whisky. By definition, whiskey (or whisky, in Scotland) is a spirit distilled from fermented grain mash — grain varieties include wheat, rye, barley, and corn — and then aged in oak barrels. Whiskey is made all over the world, which leads to there being quite a few different varieties. Let's take a look at some of the differences. </p>
-					</div>
+			<div class = "row">
+			   <div class="col-lg-6" >
+					<div class='text-center img-responsive .animate1'><img src="img/Scotland.png" alt="Scotland pic" id= "scotland-map"></div>
 			   </div>
+			   <div class="col-lg-6">
+					<div id = "scotch-content">
+						<p>Geography is an easy way to distinguish certain types of whiskey.<br><br> Scotland, the producer of scotch, has more distilleries than any other country. You may have heard of the "single malt scotch", the most distinguished of scotches. A single malt is produced at one distillery ("single"), using only malted barley as the grain ("malt"), and is distilled in copper pot stills. The process is expensive, but the whisky produced is richly flavored and, because it's not blended with whiskies from other distilleries, very individualistic. Highland Park and The Glenlivet are popular single malt scotches.</p>
+					</div>
+               </div>
+            </div>
+       	</div> 	   
+    </section>
+	
+	<!-- Scotch Section2 -->
+    <section id="" class="black container-fluid scotch-section2">
+		<div class='content-section'>
+			   <div class="col-lg-6">
+					<div class='text-center img-responsive .animate1'><img src="img/Scotland.png" alt="Scotland pic"></div>
+			   </div>
+			   <div class="col-lg-6">
+					<div>
+						<p>Blended scotch outsells single malts by a high margin. Blending smooths out rough edges and fills in missing gaps in the whisky's flavor profile. <br><br> Side note - scotch is historically known for a smoky flavor, known as "peaty". That flavor came from using a malted barley that was dried over a peat fire, which was once the only practical fuel source for many distilleries. These days it's used as an optional flavor enhancement, not a required method.</p>
+					</div>
+               </div>
            </div> 	   
     </section>
+	
+	
+	
     <!-- About Section -->
     <section id="about" class="black container-fluid about-section">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2 class='text-center animate1'>History</h2>
-			</div>
-		</div> 
 		<div class='content-section'>
                 <div class="col-lg-6">
 					<h2 class='text-center'>Bourbon</h2>
@@ -150,29 +183,6 @@
                     <h2 class='text-center'>Scotch</h2>
 					<p class='txtbox'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis ut nulla at fermentum. Integer interdum arcu a sapien sagittis volutpat. Curabitur at felis ultrices, convallis erat at, elementum dui. Mauris a ultricies risus. Integer non arcu elementum, pretium nibh sed, porttitor tellus. Aenean vitae consectetur dolor, et pharetra nunc. Suspendisse sagittis tincidunt mauris non dignissim. Curabitur pellentesque ante velit, quis porttitor augue condimentum ac. Nam lobortis dui sed lorem tristique mattis ac eget sapien. Phasellus id nibh sit amet sapien tincidunt efficitur. Aenean porttitor, lacus at efficitur vulputate, ex arcu mollis enim, at vehicula nulla ligula et libero. Donec vulputate lectus a porta vestibulum. Fusce volutpat mauris sollicitudin, euismod eros quis, fringilla tortor. Donec sed tempor urna. Suspendisse tempor arcu ex, eu ultricies velit ornare et. Duis risus dui, sagittis sed ornare sit amet, luctus eu odio. <br><br> Sed blandit vulputate dolor, in laoreet ex dapibus a. Sed tortor sapien, lacinia ac pellentesque eget, maximus eu justo. Vestibulum et ipsum vel ipsum faucibus consectetur. Cras euismod malesuada sollicitudin. Nam ac mollis ex. Vestibulum tortor lorem, condimentum in aliquam eget, elementum at erat. Pellentesque viverra arcu a nibh aliquet, et cursus nisi finibus. Integer ac maximus urna, et malesuada neque. Morbi quis molestie arcu.</p>
                </div>
-    </section>
-	
-	<!-- Compare Section -->
-    <section id="compare" class="container-fluid compare-section">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2 class='text-center'>Differences</h2>
-			</div>
-		</div> 
-		<div class='content-section'>
-                <div class="col-lg-6">
-					<h2 class='text-center'>Bourbon</h2>
-					<div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis ut nulla at fermentum. Integer interdum arcu a sapien sagittis volutpat. Curabitur at felis ultrices, convallis erat at, elementum dui. Mauris a ultricies risus. Integer non arcu elementum, pretium nibh sed, porttitor tellus. Aenean vitae consectetur dolor, et pharetra nunc. Suspendisse sagittis tincidunt mauris non dignissim. Curabitur pellentesque ante velit, quis porttitor augue condimentum ac. Nam lobortis dui sed lorem tristique mattis ac eget sapien. Phasellus id nibh sit amet sapien tincidunt efficitur. Aenean porttitor, lacus at efficitur vulputate, ex arcu mollis enim, at vehicula nulla ligula et libero. Donec vulputate lectus a porta vestibulum. Fusce volutpat mauris sollicitudin, euismod eros quis, fringilla tortor. Donec sed tempor urna. Suspendisse tempor arcu ex, eu ultricies velit ornare et. Duis risus dui, sagittis sed ornare sit amet, luctus eu odio. <br><br>Sed blandit vulputate dolor, in laoreet ex dapibus a. Sed tortor sapien, lacinia ac pellentesque eget, maximus eu justo. Vestibulum et ipsum vel ipsum faucibus consectetur. Cras euismod malesuada sollicitudin. Nam ac mollis ex. Vestibulum tortor lorem, condimentum in aliquam eget, elementum at erat. Pellentesque viverra arcu a nibh aliquet, et cursus nisi finibus. Integer ac maximus urna, et malesuada neque. Morbi quis molestie arcu.</p>
-					</div>
-			   </div>
-			   <div class="col-lg-6">
-					<div>
-						<h2 class='text-center'>Scotch</h2>
-						<p class=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis ut nulla at fermentum. Integer interdum arcu a sapien sagittis volutpat. Curabitur at felis ultrices, convallis erat at, elementum dui. Mauris a ultricies risus. Integer non arcu elementum, pretium nibh sed, porttitor tellus. Aenean vitae consectetur dolor, et pharetra nunc. Suspendisse sagittis tincidunt mauris non dignissim. Curabitur pellentesque ante velit, quis porttitor augue condimentum ac. Nam lobortis dui sed lorem tristique mattis ac eget sapien. Phasellus id nibh sit amet sapien tincidunt efficitur. Aenean porttitor, lacus at efficitur vulputate, ex arcu mollis enim, at vehicula nulla ligula et libero. Donec vulputate lectus a porta vestibulum. Fusce volutpat mauris sollicitudin, euismod eros quis, fringilla tortor. Donec sed tempor urna. Suspendisse tempor arcu ex, eu ultricies velit ornare et. Duis risus dui, sagittis sed ornare sit amet, luctus eu odio. <br><br> Sed blandit vulputate dolor, in laoreet ex dapibus a. Sed tortor sapien, lacinia ac pellentesque eget, maximus eu justo. Vestibulum et ipsum vel ipsum faucibus consectetur. Cras euismod malesuada sollicitudin. Nam ac mollis ex. Vestibulum tortor lorem, condimentum in aliquam eget, elementum at erat. Pellentesque viverra arcu a nibh aliquet, et cursus nisi finibus. Integer ac maximus urna, et malesuada neque. Morbi quis molestie arcu.</p>
-				   </div>
-              </div>    
-		 </div>
     </section>
   
 
@@ -370,8 +380,6 @@
 			}
 		});
 	<!--BOURBON LEGAL REQUIREMENTS PIE ENDS HERE-->
-	
-	
 	
 	
 	//START OF BAR CHART
