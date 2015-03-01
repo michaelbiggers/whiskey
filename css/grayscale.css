@@ -36,8 +36,8 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: none;
+    font-family: AleoLight,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -144,18 +144,18 @@ a:focus {
 }
 
 /*------ANIMATION-----*/
-.BourbonA {
+/* .BourbonA {
 	-webkit-animation-delay: .1s;
-}
-.orA {
+} */
+/* .orA {
   -webkit-animation-delay: .2s;
 }
-
-.scotchA {
-  /* -webkit-animation-duration: 3s; */
+ */
+/* .scotchA {
+  -webkit-animation-duration: 3s; 
   -webkit-animation-delay: .6s;
- /*  -webkit-animation-iteration-count: infinite; */
-}
+  -webkit-animation-iteration-count: infinite; 
+} */
 
 .bottleleft{
    /*  display: block; 
@@ -176,6 +176,12 @@ a:focus {
 	padding: 100px 0;
 }
 
+.scotchtxt {
+	/*  -webkit-animation-duration: 5s;  */
+     -webkit-animation-delay: .4s;
+ /*  -webkit-animation-iteration-count: infinite; */
+
+}
 /*------ END ANIMATION-----*/
 
 #info {
@@ -239,7 +245,7 @@ a:focus {
 @media(min-width:767px) {
     .intro {
         height: 100%;
-        padding: 10px;
+        padding: 20px;
     }
 
     .intro .intro-body .brand-heading {
@@ -328,77 +334,104 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 2%;
+    padding-top: 20px;
 	padding-right: 2%;
 	padding-left: 2%;
 }
 
-.about-section {
+.overview-section {
     width: 100%;
-    padding: 50px 0;
+    /* min-height: 100%;
+    height: 100%; */ 
+	padding: 50px 0;
     color: #fff;
-  /*   background: url(../img/barrelsB&W.jpg) no-repeat center center scroll; */
-    background-color: #F2D98D;
+    background: url(../img/barrelsB&W2.jpg) no-repeat center center scroll;
+    /* background-color: #F2D98D; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-
-.overview-section {
-    width: 100%;
-    padding: 50px 0;
-    color: #fff;
-    background: url(../img/barrelsB&W2.jpg) no-repeat center center scroll;
-    /* background-color: #591E18; */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    min-height: 100%;
-    height: 100%;
+.overview-section p{
+	line-height: 200%;
+	font-size: 24px;
+	padding-top: 2%;
+	padding-left: 5%;
+	padding-right: 10%;
+	color: #fff;
 }
 
 .scotch-main {
-	min-height: 100%;
-    height: 100%;
+	width: 100%;
+	/* min-height: 100%;
+    height: 100%; */
+	padding: 50px 0;
+	/* background-color: #662509; */
+	background: url(../img/scotchbg.jpg);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover; 
 }
+
 
 .scotch-section {
     width: 100%;
-    padding: 7% 0;
     color: #fff;
-  /*   background: url(../img/barrelsB&W.jpg) no-repeat center center scroll; */
-    background-color: #6C4428;
-    -webkit-background-size: cover;
+	padding: 50px 0;
+	/* padding: 7% 0; */
+   /* background: url(../img/scotchbg.jpg) no-repeat center center scroll; */
+   /*  background-color: #591E18; */
+    /* background-color: #662509; */
+/*     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
-	min-height: 100%;
-    height: 100%;
+    -o-background-size: cover; */
+/* 	min-height: 100%;
+    height: 100%; */
 }
 
 
 .scotch-section2 {
     width: 100%;
-    padding: 7% 0;
     color: #fff;
+	padding: 50px 0;
+   /*  padding: 7% 0; */
   /*   background: url(../img/barrelsB&W.jpg) no-repeat center center scroll; */
-    background-color: #cccccc;
+    /* background-color: #591E18; */
+	/* background-color: #662509; */
+   /*  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover; */
+	/* min-height: 100%;
+    height: 100%; */
+}
+
+.bourbon-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background: url(../img/bourbonbg.jpg) no-repeat center center scroll;
+    /* background-color: #F2D98D; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-	min-height: 100%;
-    height: 100%;
 }
 
-.download-section {
+.bourbon-section p{
+	padding-top: 2%;
+	padding-left: 5%;
+	padding-right: 10%;
+}
+
+.end-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/barrelsB&W.jpg) no-repeat center center scroll;
+    background: url(../img/wall.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -408,14 +441,35 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 2%;
-		padding-right: 4%;
-		padding-left: 4%;
+        padding-top: 20px; 
+		padding-right: 2%;
+		padding-left: 2%;
     }
 
     .download-section {
         padding: 100px 0;
     }
+	
+	.bourbon-section {
+        padding: 100px 0;
+    }
+	
+	.scotch-section {
+        padding: 100px 0;
+    }
+	
+	.scotch2-section {
+        padding: 100px 0;
+    }
+	
+	.scotch-main {
+        padding: 100px 0;
+    }
+	
+	.overview-section {
+		padding: 100px 0;
+	}
+
 
 }
 .btnpad {
@@ -467,7 +521,7 @@ ul.banner-social-buttons {
 }
 
 footer {
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 footer p {
@@ -507,18 +561,21 @@ body {
 	color: #fff;
 }
 
-.overviewtxtbox {
-    /* background-color: rgba(0,0,0,0.5);  */
+/* .overviewtxtbox {
+    background-color: rgba(0,0,0,0.5);  
 	padding: 30px;
 	color: #fff;
-}
+} */
 
 .overviewtxt {
 	line-height: 200%;
 	font-size: 24px;
 	padding-right: 4%;
+	padding: 30px;
+	color: #fff;
 }
 
+/*--- colors ---*/
 .black {
 	color: #000;
 }
@@ -526,6 +583,12 @@ body {
 .white {
 	color: #fff;
 }
+
+.brown {
+	color: #662509;
+}
+
+/*--- END colors ---*/
 
 .animate1 {
 /* 	-webkit-animation-duration: 5s; 
@@ -540,11 +603,14 @@ body {
 }
 
 .scotlandpic {
-	 background: url(../img/Scotland.png);
+	 background-image: url(../img/Scotland2.png);
+	 background-color: #662509;
+	 background-blend-mode: soft-light;
 }
 
 .carousel-control.left, .carousel-control.right {
     background-image: none;
+	position: absolute;
 }
 
 #tooltip {
@@ -567,15 +633,28 @@ body {
 				font-size: 14px;
 				line-height: 20px;
 			}
-			
+	
 
 #logo{
-    width:250px;
+    width:350px;
     display:block;
     margin:auto;
     font-family:Aleo;
 }
 
+.padt {
+	padding-top: 50px;
+}
+
+
+.padb {
+	position: abosulute;
+}
+
+#carousel {
+  max-height: 700px;
+  overflow: hidden;
+}
 
 header h1 {
     padding-top:2.6em;
@@ -587,6 +666,12 @@ header h1 {
 header h2 {
     line-height: .5em;
     font-family:AleoItalic;
-     text-transform:none;
+    text-transform:none;
 }
+
+.carousel-inner {
+	height: 500px;
+}
+
+.row { margin: 0; padding: 0 }
 
