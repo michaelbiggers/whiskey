@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bourbon or Scotch?</title>
+    <title>Bourbon vs. Scotch</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,8 +29,8 @@
 	<!-- <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['geochart']}]}"></script> -->
 
 	<!--D3 charts-->
-	<!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<script src="d3pie.min.js"></script> -->
+ <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="d3pie.min.js"></script> 
 	
 	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -123,7 +123,7 @@
 			<div class="item">
 				<!-- Scotch Section2 -->
 				<section id="about" class="container-fluid scotch-section">	
-						   <div class="col-lg-6 col-lg-offset-4 ">
+						   <div class="col-lg-6 col-lg-offset-4">
 									<p class='white animated fadeInUp scotchtxt'>Blended scotch outsells single malts by a high margin. Blending smooths out rough edges and fills in missing gaps in the whisky's flavor profile. <br><br> Side note - scotch is historically known for a smoky flavor, known as "peaty". That flavor came from using a malted barley that was dried over a peat fire, which was once the only practical fuel source for many distilleries. These days it's used as an optional flavor enhancement, not a required method.</p>							
 						   </div>							   
 				</section>
@@ -154,47 +154,70 @@
     <!-- Bourbon Section -->
     <section id="bourbon" class="black container-fluid bourbon-section">
 		<div class="row">
-				<h2 class='text-center'>Bourbon</h2>
+			<h2 class='text-center'>Bourbon</h2>
 		</div>
-		<div class='content-section'>
-                <div class="col-lg-6">
-					<!-- <div class='text-center btnpad'>
-						 <a href="javascript:SwapDivsWithClick('swapper-first','swapper-other')" class="btn btn-default btn-lg">Toggle</a> 
-						
-					</div> -->
-					<div class='animated bounceInUp'>
-						<p>America has its own forms of whiskey, the most popular of which is Bourbon. Bourbon is America's only native spirit first created, distilled, and aged in Kentucky. The many years spent aging in new barrels is one of the reasons Kentucky Bourbon is among the best whiskies in the world today.</p>
-						<!-- <div class='text-center' id='barChart'>
-							<div id="tooltip" class="hidden">
-								<p><strong><span id="value"></strong></p>
+		<div id="carousel2" class="carousel slide">
+			<!-- Indicators -->
+			<!-- <ol class="carousel-indicators">
+			   <li data-target="#carousel" data-slide-to="0" class="active"></li>
+			   <li data-target="#carousel" data-slide-to="1"></li>
+			   <li data-target="#carousel" data-slide-to="2"></li> 
+			</ol> -->
+			<div class="carousel-inner">
+				<div class="active item">
+					<div class='content-section'>
+						<div class="col-lg-6 col-lg-offset-2">
+							<div class='animated bounceInUp'>
+								<p>America has its own forms of whiskey, the most popular of which is Bourbon. Bourbon is America's only native spirit first created, distilled, and aged in Kentucky. The many years spent aging in new barrels is one of the reasons Kentucky Bourbon is among the best whiskies in the world today.</p>
 							</div>
-						</div> -->
-						<p>As of 2013, approximately 95% of all bourbon is produced in Kentucky. The state has 4.9 million barrels of bourbon that are aging – a number that exceeds the state population.</p>
+						</div>
 					</div>
-					<div class='animated bounceInUp'>
-						<p> The production of bourbon doesn't just follow a common practice; it has to follow "bourbon law".
-
-						To be classified as a bourbon, the whiskey has to be made in the United States and composed of 51% corn. New, charred oak barrels must be used. Lastly, the liquid needs to be distilled to no more than 160 proof and entered into the barrel at 125. Contrast that with other whiskeys, which must be distilled to no more than 190 proof. Jim Beam, Knob Creek, and Maker's Mark are three bourbons with which you may be familiar. 
-						</p>
-						
-						<!-- <div id="regions_div" style="width: 400px; height: 400px;"></div> -->
-					</div>
-			   </div>
-			   <div class="col-lg-6">
-					<!-- <div class='text-center btnpad'>
-						<a class="btn btn-default btn-lg">Origins</a>
-						<a class="btn btn-default btn-lg">Present</a>
-					</div> -->
-					
-               </div>
-			   <div class="row text-center">
-					<div class="col-lg-12">						  
-						<a href="#end" class="btn btn-circle page-scroll">
-							 <i class="fa fa-arrow-down animated"></i>
-						</a>
-					 </div>
 				</div>
-           </div> 	   
+				<div class="item">
+					<div class='content-section'>
+						<div class="col-lg-6 col-lg-offset-2">
+							<div class='animated bounceInUp'>
+								<p> The production of bourbon doesn't just follow a common practice; it has to follow "bourbon law".<br><br> To be classified as a bourbon, the whiskey has to be made in the United States and composed of 51% corn. New, charred oak barrels must be used. Lastly, the liquid needs to be distilled to no more than 160 proof and entered into the barrel at 125. Contrast that with other whiskeys, which must be distilled to no more than 190 proof. Jim Beam, Knob Creek, and Maker's Mark are three bourbons with which you may be familiar. 
+								</p>									
+								<!-- <div id="regions_div" style="width: 400px; height: 400px;"></div> -->
+							</div>							
+						</div>
+					</div>
+				</div>	
+				<div class="item">
+					<div class='content-section'>
+						<div class="col-lg-4 col-lg-offset-2">
+							<div class='animated bounceInUp'>
+								<p class='bchartFact'>As of 2013, approximately 95% of all bourbon is produced in Kentucky. The state has 4.9 million barrels of bourbon that are ageing – a number that exceeds the state population.
+								</p>
+							</div>							
+						</div>
+						<div class="col-lg-4">						
+							<div class='bchart animated pulse' id='barChart'>
+								<div id="tooltip" class="hidden">
+									<p><strong><span id="value"></strong></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+					   <div class="pull-center">
+							  <a class="left carousel-control" href="#carousel2" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel2" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							  </a>
+						</div>				
+			</div>
+		</div>
+		 <div class="row text-center">
+			<div class="col-lg-12">						  
+				<a href="#end" class="btn btn-circle page-scroll">
+					<i class="fa fa-arrow-down animated"></i>
+				</a>
+			</div>
+	     </div>
     </section>
 
 
@@ -403,13 +426,13 @@
 		}); -->
 	<!--BOURBON LEGAL REQUIREMENTS PIE ENDS HERE-->
 	
-	
+	<script>	
 	<!--START OF BAR CHART-->
 	<!-- Width and height - controls how much space we'll let the chart have -->
-					<!-- var sortDir = false;
+					var sortDir = false;
 					
 					var w = 400;
-					var h = 400;
+					var h = 400
 					var dataset = [
 						{ "name": "State Population", "rank": 9, "experience": "4.4 Million" },
 						{ "name": "Barrels of Bourbon", "rank": 12, "experience": "4.9 Million" }
@@ -458,8 +481,8 @@
 							d3.select(this)
 								.attr("fill", "#6C4428"); 
 							//Get this bar's x/y values, then augment for the tooltip
-							var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.rangeBand() / 1;
-							var yPosition = parseFloat(d3.select(this).attr("y")) / 1 + h / 1.7;
+							var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.rangeBand() / 2;
+							var yPosition = parseFloat(d3.select(this).attr("y")) / 2 + h / 2;
 							//Update the tooltip position and value
 							d3.select("#tooltip")
 								.style("left", xPosition + "px")
@@ -503,7 +526,6 @@
 					   .attr("font-family", "sans-serif")
 					   .attr("font-size", "18px")
 					   .attr("fill", "#fff");
- -->
 	</script>
 </body>
 

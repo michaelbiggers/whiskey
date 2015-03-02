@@ -144,6 +144,12 @@ a:focus {
 }
 
 /*------ANIMATION-----*/
+.animate1 {
+/* 	-webkit-animation-duration: 5s; 
+  -webkit-animation-delay: .6s */;
+ /*  -webkit-animation-iteration-count: infinite; */
+}
+
 /* .BourbonA {
 	-webkit-animation-delay: .1s;
 } */
@@ -179,6 +185,12 @@ a:focus {
 .scotchtxt {
 	/*  -webkit-animation-duration: 5s;  */
      -webkit-animation-delay: .4s;
+ /*  -webkit-animation-iteration-count: infinite; */
+}
+
+.bchart {
+	/*  -webkit-animation-duration: 5s;  */
+     -webkit-animation-delay: .8s;
  /*  -webkit-animation-iteration-count: infinite; */
 
 }
@@ -590,11 +602,6 @@ body {
 
 /*--- END colors ---*/
 
-.animate1 {
-/* 	-webkit-animation-duration: 5s; 
-  -webkit-animation-delay: .6s */;
- /*  -webkit-animation-iteration-count: infinite; */
-}
 .hideme{
 	visibility: hidden;
 }
@@ -672,6 +679,12 @@ header h2 {
 .carousel-inner {
 	height: 500px;
 }
+
+.bchartFact {
+	line-height: 2em;
+	font-size: 20px;
+
+} 
 
 .row { margin: 0; padding: 0 }
 
