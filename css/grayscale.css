@@ -637,8 +637,9 @@ body {
 			#tooltip p {
 				margin: 0;
 				font-family: sans-serif;
-				font-size: 14px;
+				font-size: 18px;
 				line-height: 20px;
+				text-align: center;
 			}
 	
 
@@ -680,11 +681,54 @@ header h2 {
 	height: 500px;
 }
 
+#carousel2 .carousel-inner {
+	height: 500px;
+}
+
+.container {
+	padding-top: 100px;
+    padding-bottom: 50px;
+}
+
 .bchartFact {
 	line-height: 2em;
-	font-size: 20px;
+	font-size: 22px;
+
+} 
+.bLaw {
+	line-height: 2em;
+	font-size: 24px;
 
 } 
 
-.row { margin: 0; padding: 0 }
+.row { margin: 0; }
 
+.requirement1 {
+	background: url(../img/USmap.png);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.req1 {
+	background: url(../img/USmap.png);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.req2 {
+	background: url(../img/corn.jpg);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.panelp {
+	font-size: 18px;
+	line-height: .5;
+	margin: 2px 0;
+}
