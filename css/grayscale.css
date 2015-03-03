@@ -357,17 +357,17 @@ a:focus {
     height: 100%; */ 
 	padding: 50px 0;
     color: #fff;
-    background: url(../img/barrelsB&W2.jpg) no-repeat center center scroll;
+    background: url(../img/barrelsB&W2.jpg) no-repeat center center fixed;
     /* background-color: #F2D98D; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-	/* background-attachment: fixed; */
+  
 }
 
 .overview-section p{
-	line-height: 200%;
+	line-height: 1.6;
 	font-size: 24px;
 	padding-top: 2%;
 	padding-left: 5%;
@@ -392,21 +392,20 @@ a:focus {
 }
 
 
-/* .scotch-section {
+.scotch-section {
     width: 100%;
     color: #fff;
 	padding: 50px 0;
-	 padding: 7% 0; 
-    background: url(../img/scotchbg.jpg) no-repeat center center scroll; 
-    background-color: #591E18; 
-    background-color: #662509; 
+   /*  background: url(../img/scotchbg.jpg) no-repeat center center scroll;  */
+    background-color: #f2d98d; 
+    /* background-color: #662509;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover; 
 	min-height: 100%;
-    height: 100%; 
-} */
+    height: auto%; 
+} 
 
 
 /* .scotch-section2 {
@@ -666,10 +665,10 @@ body {
 	position: abosulute;
 }
 
-#carousel {
+/* #carousel {
   max-height: 700px;
   overflow: hidden;
-}
+} */
 
 header h1 {
     padding-top:2.6em;
@@ -686,14 +685,28 @@ header h2 {
 
 .carousel-inner {
 	/* height: 500px; */
-	min-height: 800px;
+	 min-height: 400px; 
 }
 
 #carousel2 .carousel-inner {
 	/* height: 600px; */
-	min-height: 600px;
+	 min-height: 600px; 
 } 
 
+.carousel-indicators {
+       bottom: -1.5em;
+    }
+
+.carousel-indicators li{
+        /* background: url(img/shots.jpg) no-repeat; */
+       /*  background-size:120px 60px; */
+        /* width:60px;
+        height:60px;
+        cursor: pointer;
+        text-align:center; */
+		padding: 1em;
+		border-radius: 1em;
+    }
 
 .container {
 	padding-top: 100px;
@@ -711,7 +724,9 @@ header h2 {
 
 } 
 
-.row { margin: 0; }
+.row {
+	margin: 0; 
+ }
 
 /*--- accordian menu backgrounds ---*/
 
@@ -838,5 +853,34 @@ header h2 {
 	bottom: 50px;
 	margin-left: auto;
 	margin-right: auto;
+}
 
+#scotland-map {
+	max-width: 45%;
+	max-height: 40%;
+	height: auto;
+
+}
+
+@media(min-width:767px) { 
+	#scotland-map {
+	max-width: none;
+	max-height: 70%;
+}
+
+}
+
+#scotch-content {
+	padding: 0 5em;
+	margin-top: 2em;
+}
+
+#scotch-content2 {
+	padding: 0 5em;
+	margin-top: 2em;
+}
+
+#scotch-content3 {
+	padding: 0 5em;
+	margin-top: 2em;
 }
