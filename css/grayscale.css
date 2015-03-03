@@ -363,6 +363,7 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+	/* background-attachment: fixed; */
 }
 
 .overview-section p{
@@ -376,6 +377,9 @@ a:focus {
 
 .scotch-main {
 	width: 100%;
+	min-height: 100%;
+	height: auto;
+	position: relative;
 	/* min-height: 100%;
     height: 100%; */
 	padding: 50px 0;
@@ -388,41 +392,44 @@ a:focus {
 }
 
 
-.scotch-section {
+/* .scotch-section {
     width: 100%;
     color: #fff;
 	padding: 50px 0;
-	/* padding: 7% 0; */
-   /* background: url(../img/scotchbg.jpg) no-repeat center center scroll; */
-   /*  background-color: #591E18; */
-    /* background-color: #662509; */
-/*     -webkit-background-size: cover;
+	 padding: 7% 0; 
+    background: url(../img/scotchbg.jpg) no-repeat center center scroll; 
+    background-color: #591E18; 
+    background-color: #662509; 
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover; */
-/* 	min-height: 100%;
-    height: 100%; */
-}
+    -o-background-size: cover; 
+	min-height: 100%;
+    height: 100%; 
+} */
 
 
-.scotch-section2 {
+/* .scotch-section2 {
     width: 100%;
     color: #fff;
 	padding: 50px 0;
-   /*  padding: 7% 0; */
-  /*   background: url(../img/barrelsB&W.jpg) no-repeat center center scroll; */
-    /* background-color: #591E18; */
-	/* background-color: #662509; */
-   /*  -webkit-background-size: cover;
+     padding: 7% 0; 
+    background: url(../img/barrelsB&W.jpg) no-repeat center center scroll; 
+     background-color: #591E18; 
+	 background-color: #662509; 
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover; */
-	/* min-height: 100%;
-    height: 100%; */
-}
+    -o-background-size: cover; 
+    min-height: 100%;
+    height: 100%; 
+} */
 
 .bourbon-section {
     width: 100%;
+	min-height: 100%;
+	height: auto;
+	position: relative;
     padding: 50px 0;
     color: #fff;
     background: url(../img/bourbonbg.jpg) no-repeat center center scroll;
@@ -678,12 +685,14 @@ header h2 {
 }
 
 .carousel-inner {
-	height: 500px;
+	/* height: 500px; */
+	min-height: 800px;
 }
 
 #carousel2 .carousel-inner {
-	height: 600px;
-}
+	/* height: 600px; */
+	min-height: 600px;
+} 
 
 
 .container {
@@ -731,7 +740,23 @@ header h2 {
 }
 
 .req4 {
-	background: url(../img/singlebarrel.jpg);
+	background: url(../img/liquid.jpg);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.req5 {
+	background: url(../img/barrelPile.jpg);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.req6 {
+	background: url(../img/liquid.jpg);
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -739,9 +764,7 @@ header h2 {
 }
 
 
-
-/*--- End accordian menu backgrounds ---*/
-
+/*--- End accordion menu backgrounds ---*/
 
 
 .panelp {
@@ -749,6 +772,8 @@ header h2 {
 	line-height: .5;
 	margin: 2px 0;
 }
+
+/*--- accordion menu backgrounds ---*/
 
 #portfolio {
 	/* background: rgba(0,0,0,0.5);
@@ -805,4 +830,13 @@ header h2 {
 
 #portfolio * {
     z-index: 2;
+}
+
+.bottomStick {
+	width: 100%;
+	position: absolute;
+	bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+
 }
