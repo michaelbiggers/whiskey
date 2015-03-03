@@ -51,7 +51,8 @@
         <div class="intro-body">
             <div class="container">
             	<div class="row">
-            		<object id = "logo" type="image/svg+xml" data="img/logo.svg">Your browser does not support SVG</object>
+            	<!--	<object id = "logo" type="image/svg+xml" data="img/logo.svg">Your browser does not support SVG</object> -->
+            		<img id = "logo" src = "img/logo.png">
             	</div>
 
                 <div class="row">
@@ -99,31 +100,41 @@
     <section id="scotch" class="black container-fluid scotch-section">
 		<div class='content-section'>
 			<div class = "row">
-			   <div class="col-lg-6" >
+			   <div class="col-lg-5" >
 					<div class='text-center img-responsive .animate1'><img src="img/Scotland.png" alt="Scotland pic" id= "scotland-map"></div>
 			   </div>
-			   <div class="col-lg-6">
-					<div id = "scotch-content">
-						<p>Geography is an easy way to distinguish certain types of whiskey.<br><br> Scotland, the producer of scotch, has more distilleries than any other country. You may have heard of the "single malt scotch", the most distinguished of scotches. A single malt is produced at one distillery ("single"), using only malted barley as the grain ("malt"), and is distilled in copper pot stills. The process is expensive, but the whisky produced is richly flavored and, because it's not blended with whiskies from other distilleries, very individualistic. Highland Park and The Glenlivet are popular single malt scotches.</p>
-					</div>
-               </div>
+			   <div class="col-lg-7">
+			   		<div class = "carousel slide" id = "carousel">
+			   			  <ol class="carousel-indicators">
+						    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel" data-slide-to="1"></li>
+						  </ol>
+
+				   		<div class = "carousel-inner">					   
+							<div id = "scotch-content" class = "active item">
+								<p>Geography is an easy way to distinguish certain types of whiskey.<br><br> Scotland, the producer of scotch, has more distilleries than any other country. You may have heard of the "single malt scotch", the most distinguished of scotches. A single malt is produced at one distillery ("single"), using only malted barley as the grain ("malt"), and is distilled in copper pot stills. The process is expensive, but the whisky produced is richly flavored and, because it's not blended with whiskies from other distilleries, very individualistic. Highland Park and The Glenlivet are popular single malt scotches.</p>
+							</div>
+							<div id = "scotch-content-2" class = "item">
+								<p>Blended scotch outsells single malts by a high margin. Blending smooths out rough edges and fills in missing gaps in the whisky's flavor profile. </p>
+
+								<p><em>Side note - scotch is historically known for a smoky flavor, known as "peaty". That flavor came from using a malted barley that was dried over a peat fire, which was once the only practical fuel source for many distilleries. These days it's used as an optional flavor enhancement, not a required method. </em></p>
+							</div>						
+               			</div>
+               		</div>
+	               		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+	    				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    				<span class="sr-only">Previous</span>
+	  					</a>
+						<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+	    				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    				<span class="sr-only">Next</span>
+	  					</a>
+          		 </div>
             </div>
        	</div> 	   
     </section>
 	
-	<!-- Scotch Section2 -->
-    <section id="" class="black container-fluid scotch-section2">
-		<div class='content-section'>
-			   <div class="col-lg-6">
-					<div class='text-center img-responsive .animate1'><img src="img/Scotland.png" alt="Scotland pic"></div>
-			   </div>
-			   <div class="col-lg-6">
-					<div>
-						<p>Blended scotch outsells single malts by a high margin. Blending smooths out rough edges and fills in missing gaps in the whisky's flavor profile. <br><br> Side note - scotch is historically known for a smoky flavor, known as "peaty". That flavor came from using a malted barley that was dried over a peat fire, which was once the only practical fuel source for many distilleries. These days it's used as an optional flavor enhancement, not a required method.</p>
-					</div>
-               </div>
-           </div> 	   
-    </section>
+	
 	
 	
 	
