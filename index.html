@@ -29,7 +29,7 @@
 	<!-- <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['geochart']}]}"></script> -->
 
 	<!--D3 charts-->
- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="d3pie.min.js"></script> 
 	
 	
@@ -111,10 +111,25 @@
 					  <div class = "carousel-inner">				  
 							<div class = "scotch-content active item animated fadeIn">
 								<p>Geography is an easy way to distinguish certain types of whiskey.<br><br> Scotland, the producer of scotch, has more distilleries than any other country. You may have heard of the "single malt scotch", the most distinguished of scotches. A single malt is produced at one distillery ("single"), using only malted barley as the grain ("malt"), and is distilled in copper pot stills. The process is expensive, but the whisky produced is richly flavored and, because it's not blended with whiskies from other distilleries, very individualistic. Highland Park and The Glenlivet are popular single malt scotches.</p>
+									<div class="container">
+										<div class='row'>
+											<div class="col-lg-2 col-lg-offset-2 requirements-item">
+												<a class="requirements-link" data-toggle="tooltip" data-placement="top" title="Michael Jackson has called it &quot;The greatest all-rounder in the world of malt whisky.&quot;">
+													<img src="img/highlandParkS.jpg" class="img-responsive" alt="">
+												</a>
+											</div>
+											<div class="col-lg-2 requirements-item">
+												<a class="requirements-link" data-toggle="tooltip" data-placement="top" title="The best selling malt whisky in the United States and the world's second best selling single malt whisky.">											
+													<img src="img/glenlivetS.jpg" class="img-responsive" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
 							</div>
 							<div  class = "scotch-content item animated fadeIn">
-								<p>Blended scotch outsells single malts by a high margin. Blending smooths out rough edges and fills in missing gaps in the whisky's flavor profile. 
+								<p>Blended Scotch outsells single malts by a high margin. Blending smooths out rough edges and fills in missing gaps in the whisky's flavor profile. 
 								</p>
+								<div id='scotchChart' class=""></div>
 							</div>
 							<div class = "scotch-content item animated fadeIn">
 								<p>Scotch is historically known for a smoky flavor, known as "peaty". That flavor came from using a malted barley that was dried over a peat fire, which was once the only practical fuel source for many distilleries. These days it's used as an optional flavor enhancement, not a required method.  
@@ -133,13 +148,13 @@
 			</div>
             </div>
         </div>  
-		<!-- <div class="row text-center bottomStick">
+		 <div class="row text-center bottomStick">
 			<div class="col-lg-12">						  
 				<a href="#end" class="btn btn-circle page-scroll">
 					<i class="fa fa-arrow-down animated"></i>
 				</a>
 			</div>
-	    </div> -->
+	    </div> 
     </section>
 	 <!-- Controls -->
 
@@ -188,27 +203,27 @@
 							<div class="container">
 								<div class='row'>
 									<div class="col-lg-2  requirements-item">
-										<a href="#requirementsModal1" class="requirements-link" data-toggle="tooltip" data-placement="top" title="Produced in the United States of America">
+										<a class="requirements-link" data-toggle="tooltip" data-placement="top" title="Produced in the United States of America">
 											<img src="img/USmap2.jpg" class="img-responsive" alt="">
 										</a>
 									</div>
 									<div class="col-lg-2 requirements-item">
-										<a href="#requirementsModal1" class="requirements-link" data-toggle="tooltip" data-placement="top" title="Made from a grain mixture that is at least 51% corn. ">											
+										<a class="requirements-link" data-toggle="tooltip" data-placement="top" title="Made from a grain mixture that is at least 51% corn. ">											
 											<img src="img/corn2.jpg" class="img-responsive" alt="">
 										</a>
 									</div>
 									<div class="col-lg-2 requirements-item" >
-										<a href="#requirementsModal1" class="requirements-link" data-toggle="tooltip" data-placement="top" title="Aged in new, charred oak barrels.">
+										<a class="requirements-link" data-toggle="tooltip" data-placement="top" title="Aged in new, charred oak barrels.">
 											<img src="img/barrelPile2.jpg" class="img-responsive" alt="">
 										</a>
 									</div>
 									<div class="col-lg-2 requirements-item">
-										<a href="#requirementsModal1" class="requirements-link" data-toggle="tooltip" data-placement="top" title="Distilled to no more than 160 (U.S.) proof (80% alcohol by volume).">
+										<a class="requirements-link" data-toggle="tooltip" data-placement="top" title="Distilled to no more than 160 (U.S.) proof (80% alcohol by volume).">
 											<img src="img/liquid2.jpg" class="img-responsive" alt="">
 										</a>
 									</div>
 									<div class="col-lg-2 requirements-item">
-										<a href="" class="requirements-link" data-toggle="tooltip" data-placement="top" title="Entered into the barrel for ageing at no more than 125 proof (62.5% alcohol by volume).">
+										<a class="requirements-link" data-toggle="tooltip" data-placement="top" title="Entered into the barrel for ageing at no more than 125 proof (62.5% alcohol by volume).">
 											<img src="img/singlebarrel2.jpg" class="img-responsive" alt="">
 										</a>
 									</div>
@@ -262,7 +277,7 @@
     </section>
 
 
-    <!-- Download Section -->
+    <!-- End Section -->
     <section id="end" class="container-fluid end-section">
 				<div class="row">
 					<div class="col-lg-8 col-lg-offset-2">
@@ -573,7 +588,95 @@
 					   .attr("font-family", "sans-serif")
 					   .attr("font-size", "18px")
 					   .attr("fill", "#fff");
-	</script>
+					   
+					   
+					   
+					   
+					   
+					   
+					  //Start of Scotch Donut Chart
+						var pie = new d3pie("#scotchChart", {
+							"header": {
+								"title": {
+									"fontSize": 24,
+									"font": "open sans"
+								},
+								"subtitle": {
+									"color": "#999999",
+									"fontSize": 12,
+									"font": "open sans"
+								},
+								"titleSubtitlePadding": 9
+							},
+							"footer": {
+								"color": "#999999",
+								"fontSize": 10,
+								"font": "open sans",
+								"location": "bottom-left"
+							},
+							"size": {
+								"canvasHeight": 300,
+								"canvasWidth": 500,
+								"pieInnerRadius": "67%",
+								"pieOuterRadius": "80%"
+							},
+							"data": {
+								"sortOrder": "value-desc",
+								"content": [
+									{
+										"label": "Blended",
+										"value": 50000,
+										"color": "#0c6197"
+									},
+									{
+										"label": "Single Grain & Blended Malt",
+										"value": 5500,
+										"color": "#618d1b"
+									}
+								]
+							},
+							"labels": {
+								"outer": {
+									"pieDistance": 24
+								},
+								"inner": {
+									"hideWhenLessThanPercentage": 3
+								},
+								"mainLabel": {
+									"font": "Aleo",
+									"fontSize": 18
+								},
+								"percentage": {
+									"color": "#ffffff",
+									"font": "open sans",
+									"fontSize": 14,
+									"decimalPlaces": 0
+								},
+								"value": {
+									"color": "#adadad",
+									"font": "open sans",
+									"fontSize": 15
+								},
+								"lines": {
+									"enabled": true
+								}
+							},
+							"effects": {
+								"pullOutSegmentOnClick": {
+									"effect": "linear",
+									"speed": 400,
+									"size": 8
+								}
+							},
+							"misc": {
+								"gradient": {
+									"enabled": true,
+									"percentage": 100
+								}
+							}
+						});
+
+		</script>				
 </body>
 
 </html>

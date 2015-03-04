@@ -146,7 +146,7 @@ a:focus {
 /*------ANIMATION-----*/
 .animate1 {
 /* 	-webkit-animation-duration: 5s; 
-  -webkit-animation-delay: .6s */;
+  -webkit-animation-delay: .6s; */
  /*  -webkit-animation-iteration-count: infinite; */
 }
 
@@ -405,6 +405,7 @@ a:focus {
     -o-background-size: cover; 
 	min-height: 100%;
     height: auto%; 
+	position: relative;
 } 
 
 
@@ -685,7 +686,7 @@ header h2 {
 
 .carousel-inner {
 	/* height: 500px; */
-	 min-height: 600px; 
+	 min-height: 550px; 
 }
 
 #carousel2 .carousel-inner {
@@ -818,7 +819,6 @@ header h2 {
 #requirements .requirements-item .requirements-link :hover {
     opacity: .6;
 	background-color: #000;
-	
 }
 /*---END Bourbon Law images styling ---*/
 
@@ -848,6 +848,9 @@ header h2 {
 .scotch-content {
 	padding: 0 5em;
 	margin-top: 2em;
+	/* 	-webkit-animation-duration: 5s; */
+    -webkit-animation-delay: .4s;
+ /*  -webkit-animation-iteration-count: infinite; */
 }
 
 
