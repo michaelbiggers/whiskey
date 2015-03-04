@@ -194,6 +194,12 @@ a:focus {
  /*  -webkit-animation-iteration-count: infinite; */
 
 }
+
+.headerArrow {
+	/* -webkit-animation-duration: 5s;  */
+  -webkit-animation-delay: 2s; 
+ /*  -webkit-animation-iteration-count: infinite; */
+}
 /*------ END ANIMATION-----*/
 
 #info {
@@ -695,13 +701,13 @@ header h1 {
     font-family:AleoLight;
     text-transform:none;
     line-height: 1em;
-	-webkit-animation-delay: .5s;
+	/* -webkit-animation-delay: .4s; */
 }
 header h2 {
     line-height: .5em;
     font-family:AleoItalic;
     text-transform:none;
-	-webkit-animation-delay: 1.8s;
+	-webkit-animation-delay: 1s;
 }
 
 .carousel-inner {
