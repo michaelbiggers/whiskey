@@ -24,15 +24,47 @@
 	
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
 	
-	<!--Google charts-->
-	<!-- <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['geochart']}]}"></script> -->
+	
 
 	<!--D3 charts-->
    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="d3pie.min.js"></script> 
 	
 	
+	<!--Google charts-->
+	<!-- <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization',
+       'version':'1','packages':['timeline']}]}"></script>
+	
+		<script type="text/javascript">
+		 google.setOnLoadCallback(drawChart);
+			function drawChart() {
+			  var container = document.getElementById('timeline');
+			  var chart = new google.visualization.Timeline(container);
+			  var dataTable = new google.visualization.DataTable();
+			  dataTable.addColumn({ type: 'string', id: 'Role' });
+			  dataTable.addColumn({ type: 'string', id: 'Name' });
+			  dataTable.addColumn({ type: 'date', id: 'Start' });
+			  dataTable.addColumn({ type: 'date', id: 'End' });
+			  dataTable.addRows([
+				[ 'Bourbon', 'George Washington', new Date(1789, 3, 29), new Date(1797, 2, 3) ],
+				[ 'Scotch',  'Thomas Jefferson',  new Date(1801, 2, 3),  new Date(1809, 2, 3) ]]);
+
+			  var options = {
+				colors: ['#cbb69d', '#603913', '#c69c6e'],
+				timeline: { rowLabelStyle: {fontName: 'Helvetica', fontSize: 24, color: '#603913' },
+							barLabelStyle: { fontName: 'Garamond', fontSize: 14 } }
+			  };
+
+			  chart.draw(dataTable, options);
+			}
+		</script> -->
+		
+		
+		 <script src="vis.min.js"></script>
+		 <link href="vis.min.css" rel="stylesheet" type="text/css" />
+		
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,7 +74,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll">
+<body id="page-top" data-spy="scroll" onload="onLoad();" onresize="onResize();">
 
 
 	
@@ -62,10 +94,10 @@
                   <!--<div class="col-md-8">-->
                         
 						<h1 class="wow fadeIn">Do you know what you're drinking?</h1>
-						<h2 class="wow flipInX">a primer on bourbon and scotch</h2>
+						<h2 class="wow fadeIn">a primer on bourbon and scotch</h2>
                         
 
-                        <a href="#overview" class="btn btn-circle page-scroll">
+                        <a href="#overview" class="btn btn-circle2 page-scroll">
                             <!-- <i class="fa fa-arrow-down animated"></i> -->
 							<img src="img/whiskeyArrowWhite.png" class="wow slideInDown img-responsive headerArrow" alt="">
                         </a>
@@ -85,38 +117,46 @@
 			</div>
 			<div class="row">
                 <div class="col-lg-4">
-					<div class='wow bounceInUp'>
-						<p>Let's start with what goes into making a whisky. By definition, whiskey is a spirit distilled from fermented grain mash aged in oak barrels. Grain varieties include wheat, rye, barley, and corn. Whiskey is made all over the world, which leads to there being quite a few different varieties. Bourbon and Scotch are two whiskies with a lot of similarities, but they each have a story of their own. Let's learn the differences between them and become closer with the spirits. </p>
-					</div>
-			   </div>
+					<div class='overviewtxtbox wow bounceInUp'>
+						<p>Let's start with what goes into making a whisky. By definition, whiskey is a spirit distilled from fermented grain mash aged in oak barrels. Grain varieties include wheat, rye, barley, and corn. Whiskey is made all over the world, which leads to there being quite a few different varieties. The term ‘whisky’ is derived from the Gaelic ‘uisge beatha’, or ‘usquebaugh’, meaning ‘water of life’. Gaelic is that branch of Celtic spoken in the Highlands of Scotland. This brings us to the first Whiskey we will look at. You guessed it. Scotch.</p>
+						<!-- <h3>Origin of the word <strong>Whiskey</strong></h3>
+						<p>The term ‘whisky’ derives originally from the Gaelic ‘uisge beatha’, or ‘usquebaugh’, meaning ‘water of life’. Gaelic is that branch of Celtic spoken in the Highlands of Scotland. </p> -->
+			   		</div>
+				</div>
+			</div> 
+			    <div class="row text-center bottomStick">
+			<div class="col-lg-12">						  
+				<a href="#scotch" class="btn btn-circle2 page-scroll">
+					<!-- <i class="fa fa-arrow-down animated"></i> -->
+					<img src="img/whiskeyArrowWhite.png" class="img-responsive" alt="">
+				</a>
 			</div>
-			   <div class="row text-center">
-                    <a href="#scotch" class="btn btn-circle page-scroll">
-                         <!-- <i class="fa fa-arrow-down animated"></i> -->
-						 <img src="img/whiskeyArrowWhite.png" class="img-responsive" alt="">
-                    </a>
-               </div>
-           </div> 	
+	     </div>
+           	
     </section>
 	
 	
 <section id="scotch" class="black container-fluid scotch-section">
+	<div class="row">
+			<h2 class='white text-center wow bounceIn'>Scotch</h2>
+	</div>
 	<div class='content-section'>
 		<div class = "row">
 		  <div class="col-lg-6" >
-				<div class='text-center img-responsive wow slideInLeft'><img src="img/Scotland3.png" alt="Scotland pic" id= "scotland-map"></div>
+				<div class='text-center img-responsive wow slideInLeft'><img src="img/Scotland4.png" alt="Scotland pic" id= "scotland-map"></div>
 		  </div>
 		  <div class="col-lg-6">
 				  <div class = "carousel slide" id = "carousel">
 					 <ol class="carousel-indicators">
 						<li data-target="#carousel" data-slide-to="0" class="active"></li>
 						<li data-target="#carousel" data-slide-to="1"></li>
-					    <li data-target="#carousel" data-slide-to="2"></li>
+						<li data-target="#carousel" data-slide-to="2"></li>
+					<!-- 	<li data-target="#carousel" data-slide-to="3"></li> -->
 					  </ol>
 					  <div class = "carousel-inner">				  
 							<div class = "scotch-content active item animated fadeIn">
-								<p>Geography is an easy way to distinguish certain types of whiskey.<br><br> Scotland, the producer of scotch, has more distilleries than any other country. You may have heard of the "single malt scotch", the most distinguished of scotches. A single malt is produced at one distillery ("single"), using only malted barley as the grain ("malt"), and is distilled in copper pot stills. The process is expensive, but the whisky produced is richly flavored and, because it's not blended with whiskies from other distilleries, very individualistic. Highland Park and The Glenlivet are popular single malt scotches.</p>
-									<div class="container">
+								<p class='indent'><i>Geography</i> is an easy way to distinguish certain types of whiskey.<br>Scotland, the producer of scotch, has more distilleries than any other country. You may have heard of the "single malt scotch", the most distinguished of scotches. A single malt is produced at one distillery ("single"), using only malted barley as the grain ("malt"), and is distilled in copper pot stills. The process is expensive, but the whisky produced is richly flavored and, because it's not blended with whiskies from other distilleries, very individualistic. Highland Park and The Glenlivet are popular single malt scotches.</p>
+									<!-- <div class="container">
 										<div class='row'>
 											<div class="col-lg-2 col-lg-offset-2 requirements-item">
 												<a class="requirements-link" data-toggle="tooltip" data-placement="top" title="The only whisky ever to have scored a rating of 100% by the regular tasting team of The Scotsman">
@@ -129,27 +169,28 @@
 												</a>
 											</div>
 										</div>
-									</div>
+									</div> -->
 							</div>
 							<div  class = "scotch-content item animated fadeIn">
-								<p>Blended Scotch outsells single malts by a high margin. Blending smooths out rough edges and fills in missing gaps in the whisky's flavor profile. 
-								</p>
-								<div id='scotchChart' class=""></div>
+								
+								<h3>When was Scotch Whiskey first distilled?</h3>
+									<p>Whisky has been distilled in Scotland for hundreds of years. There is some evidence to show that the art of distilling could have been brought to the country by Christian missionary monks, but it has never been proved that Highland farmers did not themselves discover how to distil spirits from their surplus barley. </p>
 							</div>
-							<div class = "scotch-content item animated fadeIn">
-								<p>Scotch is historically known for a smoky flavor, known as "peaty". That flavor came from using a malted barley that was dried over a peat fire, which was once the only practical fuel source for many distilleries. These days it's used as an optional flavor enhancement, not a required method.  
-								</p>
+							<div  class = "scotch-content item animated fadeIn">
+									<p>Blended Scotch outsells single malts by a high margin. Blending smooths out rough edges and fills in missing gaps in the whisky's flavor profile. 
+									</p>
+								<div id='scotchChart'></div>
 							</div>
 					 </div>
                 </div>
-				  <!-- <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+				   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
 					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 					<span class="sr-only">Previous</span>
 				  </a>
 				  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
 					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
-				  </a> -->
+				  </a> 
 			</div>
             </div>
         </div>  
@@ -163,7 +204,24 @@
 	    </div> 
     </section>
 	 <!-- Controls -->
-
+	<section id="sidenote" class="black container-fluid sidenote-section">
+				<div class="row">
+					<div class ="col-lg-2">
+					</div>
+	                <div class="col-lg-8">
+						<div class='wow bounceInUp'>
+							 <p class='txtbox2'><em>Side note-</em> Scotch is historically known for a smoky flavor, known as "peaty". That flavor came from using a malted barley that was dried over a peat fire, which was once the only practical fuel source for many distilleries. These days it's used as an optional flavor enhancement, not a required method.</p>
+						</div>
+				   </div>
+				</div>
+				   <!--<div class="row text-center">
+	                    <a href="#scotch" class="btn btn-circle page-scroll">-->
+	                         <!-- <i class="fa fa-arrow-down animated"></i> -->
+					<!--		 <img src="img/whiskeyArrowWhite.png" class="img-responsive" alt="">
+	                    </a>
+	               </div>-->
+	           </div> 	
+    </section>
 	
 	
     <!-- Bourbon Section -->
@@ -197,12 +255,6 @@
 									</p>									
 									<!-- <div id="regions_div" style="width: 400px; height: 400px;"></div> -->
 								</div>							
-							</div>
-							<div class="col-lg-4">
-								
-								
-
-								
 							</div>
 						</div>
 						<section id="requirements">
@@ -275,7 +327,7 @@
 		</div>
 		 <div class="row text-center bottomStick">
 			<div class="col-lg-12">						  
-				<a href="#end" class="btn btn-circle page-scroll">
+				<a href="#history" class="btn btn-circle page-scroll">
 					<!-- <i class="fa fa-arrow-down animated"></i> -->
 					<img src="img/whiskeyArrow.png" class="img-responsive" alt="">
 				</a>
@@ -283,16 +335,176 @@
 	     </div>
     </section>
 
-
+	<!-- history Section -->
+	<section id="history" class="black container-fluid history-section">
+	                <div class="col-lg-8 col-lg-offset-2">
+						<div class='wow bounceInUp'>
+							<h3 class='padb white text-center'>Let's look at a few moments for Bourbon and Scotch</h3> 
+				        </div>
+				<div class='content-section'>
+					<section id="requirements">
+							
+								<div class='row'>
+									<div class="col-lg-2">
+									
+									</div>
+									<div class="col-lg-2  requirements-item">
+										<a href="#requirementsModal1" class="portfolio-link" data-toggle="modal">
+											<img src="img/kingJamesS.jpg" class="wow swing img-responsive" alt="">
+										</a>
+										<p class='white text-center'>1506</p> 
+									</div>
+									<div class="col-lg-2 requirements-item">
+										<a href="#requirementsModal2" class="portfolio-link" data-toggle="modal">											
+											<img src="img/bourbonCountyS.jpg" class="wow swing pulse2 img-responsive" alt="">
+										</a>
+										<p class='white text-center'>1785</p> 
+									</div>
+										<div class="col-lg-2 requirements-item">
+										<a href="#requirementsModal4" class="portfolio-link" data-toggle="modal">
+											<img src="img/jimBeamS.jpg" class="wow swing pulse4 img-responsive" alt="">
+										</a>
+										<p class='white text-center'>1795</p>
+									</div>
+									<div class="col-lg-2 requirements-item" >
+										<a href="#requirementsModal3" class="portfolio-link" data-toggle="modal">
+											<img src="img/johnnieS.jpg" class="wow swing pulse3 img-responsive" alt="">
+										</a>
+										<p class='white text-center'>1820</p> 
+									</div>
+								
+									<!-- <div class="col-lg-2 requirements-item">
+										<a href="#requirementsModal5" class="portfolio-link" data-toggle="modal">
+											<img src="img/singlebarrel2.jpg" class="wow swing pulse5 img-responsive" alt="">
+										</a>
+									</div> 
+									 <div class="col-lg-2 requirements-item">
+										<a href="#requirementsModal6" class="portfolio-link" data-toggle="modal">
+											<img src="img/bBottles.jpg" class="wow swing pulse6 img-responsive" alt="">
+										</a>
+									</div>  -->
+								</div>
+							</div>
+					
+					</section>
+    </section>
+	
     <!-- End Section -->
     <section id="end" class="container-fluid end-section">
-				<div class="row">
-					<div class="col-lg-6 col-lg-offset-2">
-						<p class='txtbox'>There are plenty of other examples - Canadian whiskey, Irish scotch, Tenessee whiskey. But with the information you've learned here, you're well-equipped to walk into a bar and order a bourbon, neat, and have an idea of what you're getting. Bon voyage, whiskey friend. </p>
+				<div class="row padt">
+					<div class="col-lg-6 col-lg-offset-3">
+						<h2 class='text-center'>There are plenty of other examples of different whiskies. <!-- - Canadian whiskey, Irish scotch, Tennessee whiskey. --></h2>
 					</div>
-				</div> 
+				</div>
+								<div class='row padt'>
+									<div class="col-lg-2 col-lg-offset-3  requirements-item">
+											<img src="img/canadianBottle.png" class="img-centered wow bounceInLeft late img-responsive" alt="">
+									</div>
+									<div class="col-lg-2 requirements-item">
+											<img src="img/irishBottle.png" class="img-centered wow bounceInRight  img-responsive" alt="">
+									</div>
+									<div class="col-lg-2 requirements-item">											
+											<img src="img/tennesseeBottle.png" class="img-centered wow bounceInRight later img-responsive" alt="">
+									</div>
+								</div>
+								<div class="row padt">
+									<div class="col-lg-6 col-lg-offset-3">
+										<p class='padt text-center'>But with the information you've learned here, you're well-equipped to walk into a bar and order a bourbon and have an idea of what you're getting.</p>
+										<h2 class='padt text-center wow fadeInDown'>Bon voyage, whiskey friend.</h2>
+									</div>
+								</div>
+				
     </section>
   
+  
+	<div class="requirements-modal modal fade" id="requirementsModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h3 class='black'>King James IV Knows A Good Time</h3>
+                            <img src="img/kingJames.jpg" class="img-responsive img-centered" alt="">
+                            <p class='black'>In 1506, King James IV of Scotland purchased large amounts of Scotch whisky from the Guild of Surgeon Barbers, a well known whisky producer at the time.</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="requirements-modal modal fade" id="requirementsModal2" tabindex="-1" role="dialog" aria-hidden="true">
+       <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h3 class='black'>Start of something Beautiful</h3>
+                            <img src="img/bourbonCountyS.jpg" class="img-responsive img-centered" alt="">
+                            <p class='black'>In 1785, Bourbon County (named after the House of Bourbon in France), was established in Kentucky. These days Bourbon County has little importance in the production of bourbon whiskey, instead most production is concentrated in areas such as Louisville, Frankfurt and Bardstown.</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="requirements-modal modal fade" id="requirementsModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h3 class='black'>Johnnie Walker Shows Who's Boss</h3>
+                            <img src="img/johnnieWalker.jpg" class="img-responsive img-centered" alt="">
+                            <p class='black'>In 1820, John Walker started production of his famous blended Scotch whisky. Today, this brand of whisky holds the record as the most popular and largest selling Scotch whisky in the world!</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="requirements-modal modal fade" id="requirementsModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h3 class='black'>Mr. Beam</h3>
+                            <img src="img/jimBeam.jpg" class="img-responsive img-centered" alt="">
+                            <p class='black'>The Beam family (originally spelled Böhm) moved from Germany to Kentucky in the late 18th century. In 1795, Jacob Beam retailed his first barrel of Bourbon whiskey. The family legacy continues today and is now on its 7th generation. </p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -320,61 +532,10 @@
 	<script>
 	 new WOW().init();
 	</script>
-		
-	
-	<!-- below is work in progress -->
-	
-<!--  	<script type="text/javascript" src="js/skrollr.min.js"></script>
-	<script>
-    var s = skrollr.init({
-		render: function(data) {
-		  //Log the current scroll position.
-		  $('#info').text(data.curTop);
-		}
-	});
-	</script> -->
-	
-	
-	<!-- <script src="assets/viewportchecker.js"></script> 
-	<script type="text/javascript">
-		jQuery(document).ready(function() {
-			jQuery('.post').addClass("hideme").viewportChecker({
-				classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
-				offset: 100  
-			   });   
-		});            
-	</script> -->
-	
-	<!-- <script>
-		$(window).scroll(function() {
-			$('.animate1').each(function(){
-			var imagePos = $(this).offset().top;
 
-			var topOfWindow = $(window).scrollTop();
-				if (imagePos < topOfWindow+400) {
-					$(this).addClass("animated swing");
-				}
-			});
-		});
-	</script> -->
 	
 	
-	<!-- <script type="text/javascript">
-	function SwapDivsWithClick(div1,div2)
-	{
-	   d1 = document.getElementById(div1);
-	   d2 = document.getElementById(div2);
-	   if( d2.style.display == "none" )
-	   {
-		  d1.style.display = "none";
-		  d2.style.display = "block";
-	   }
-	   else
-	   {
-		  d1.style.display = "block";
-		  d2.style.display = "none";
-	   }
-	} -->
+
 	
 	<!--GOOGLE CHART STARTS HERE-->
 	 <!--  google.setOnLoadCallback(drawRegionsMap);
@@ -398,110 +559,19 @@
         chart.draw(data, options); -->
       
 	  <!--GOOGLE CHART ENDS HERE-->
-	  
-	
-	<!--BOURBON LEGAL REQUIREMENTS PIE STARTS HERE-->
-		<!-- var pie = new d3pie("#pie", { 
-			
-			"size": {
-				"canvasWidth": 900,
-				"pieInnerRadius": "10%",
-				"pieOuterRadius": "50%"
-			},
-			"data": {
-				"sortOrder": "value-desc",
-				"content": [
-					{
-						"label": "Produced in the United States",
-						"value": 2000,
-						"color": "rgba(255,255,255,0.5)"
-					},
-					{
-						"label": "Aged in new, charred oak barrels.",
-						"value": 2000,
-						"color": "rgba(255,255,255,0.2)"
-					},
-					{
-						"label": "Made from a grain mixture that is at least 51% corn.",
-						"value": 2000,
-						"color": "rgba(255,255,255,0.3)"
-					},
-					{
-						"label": "Distilled to no more than 160 (U.S.) proof.",
-						"value": 2000,
-						"color": "rgba(255,255,255,0.1)"
-					},
-					{
-						"label": "Entered into the barrel for aging at no more than 125 proof.",
-						"value": 2000,
-						"color": "rgba(255,255,255,0.4)"
-					},
-					{
-						"label": "Bottled at 80 proof or more (40% alcohol by volume).",
-						"value": 2000,
-						"color": "rgba(255,255,255,0.0)"
-					}
-				]
-			},
-			"labels": {
-				"outer": {
-					"format": "none",
-					"hideWhenLessThanPercentage": 1,
-					"pieDistance": 8
-				},
-				"inner": {
-					"format": "none",
-					"hideWhenLessThanPercentage": 3
-				},
-				"mainLabel": {
-					"fontSize": 11
-				},
-				"percentage": {
-					"color": "#ffffff",
-					"decimalPlaces": 0
-				},
-				"value": {
-					"color": "#adadad",
-					"fontSize": 11
-				},
-				"lines": {
-					"enabled": false
-				}
-			},
-			"tooltips": {
-				"enabled": true,
-				"type": "placeholder",
-				"string": "{label}",
-				"styles": {
-					"backgroundColor": "#ffffff",
-					"backgroundOpacity": 0.95,
-					"color": "#000000",
-					"font": "open sans",
-					"fontSize": 18,
-					"padding": 6
-				}
-			},
-			"effects": {
-				"pullOutSegmentOnClick": {
-					"speed": 400,
-					"size": 8
-				}
-			},
-			"misc": {
-				"gradient": {
-					"enabled": true,
-					"percentage": 100
-				}
-			}
-		}); -->
-	<!--BOURBON LEGAL REQUIREMENTS PIE ENDS HERE-->
+	 
 	
 	<script>	
 	
 	$(function () {
 	  $('[data-toggle="tooltip"]').tooltip()
-	})
+	}) 
+ 
+	
 
+						
+						
+						
 
 	<!--START OF BAR CHART-->
 	<!-- Width and height - controls how much space we'll let the chart have -->
@@ -640,12 +710,12 @@
 									{
 										"label": "Blended",
 										"value": 50000,
-										"color": "#0c6197"
+										"color": "#593312"
 									},
 									{
 										"label": "Single Grain & Blended Malt",
 										"value": 5500,
-										"color": "#618d1b"
+										"color": "#BF612A"
 									}
 								]
 							},
@@ -654,7 +724,7 @@
 									"pieDistance": 24
 								},
 								"inner": {
-									"hideWhenLessThanPercentage": 3
+									"hideWhenLessThanPercentage": 100
 								},
 								"mainLabel": {
 									"font": "Aleo",
