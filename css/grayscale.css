@@ -403,7 +403,7 @@ a:focus {
 
 .overview-section {
     width: 100%;
-    min-height: 60%;
+    min-height: 100%;
     height: auto; 
 	position: relative; 
 	padding: 50px 0;
@@ -508,7 +508,7 @@ a:focus {
     background-position: center center;
     background-attachment:fixed;
     background-size: cover;
-    min-height:50%;
+    min-height:60%;
 }
 
 .end-section {
@@ -784,7 +784,7 @@ header h2 {
 
 .carousel-inner {
 	/* height: 500px; */
-	 min-height: 620px; 
+	 min-height: 550px; 
 }
 
 #carousel2 .carousel-inner {
@@ -1103,14 +1103,14 @@ header h2 {
  -webkit-animation-delay: .1s; 
 }
 .pulse3 {
- -webkit-animation-delay: .2s; 
-}
-.pulse4 {
  -webkit-animation-delay: .3s; 
 }
+.pulse4 {
+ -webkit-animation-delay: .5s; 
+}
 .pulse5 {
- -webkit-animation-delay: .4s; 
+ -webkit-animation-delay: .7s; 
 }
 .pulse6 {
- -webkit-animation-delay: .5s; 
+ -webkit-animation-delay: .9s; 
 }
